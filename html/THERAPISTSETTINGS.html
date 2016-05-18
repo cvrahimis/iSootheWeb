@@ -1,0 +1,151 @@
+<html>
+    <head>
+        <title>iSoothe</TITLE>
+        <meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'>
+            <meta name='viewport' content='minimum-scale=0.98; maximum-scale=5;  initial-scale=0.98; user-scalable=no; width=640'>
+                <link rel='stylesheet' type='text/css' href='adminStyles.css'>
+                    <script language=Javascript type='text/javascript' src='AdminMethods.js'></script>
+                    </head>
+    <style>body{background-image: url("grey-silk-website-background.jpg")}</style>
+    <div align='center'>
+        <div id = 'TitleBar'>
+            <span id = 'TitleBarSpan'><nobr>Therapist Interface</nobr></span>
+            <a href= 'logout.php'><button id='LogOutbutton' type='button' onclick='window.location.href=ílogout.phpí;'><i><b>Log Out<b></i></button></a>
+        </div>
+        
+        <div id='ActionSelectors'>
+            <table border='0' cellspacing='0'>
+                
+                <tr>
+                    <td height='25px'></td>
+                </tr>
+                <tr>
+                    <td id='AdminBtn0' class='option' onmouseover='MenuItem_OnMouseOver(0);' onmouseout='MenuItem_OnMouseOut(0);' onclick='toggleAddPatientInterface();'>
+                        <div class='optionContents'><span>&nbsp;&nbsp;New Patient</span></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td height='25px'></td>
+                </tr>
+                
+                
+                <tr>
+                    <td height='25px'></td>
+                </tr>
+                <tr>
+                    <td id='AdminBtn1' class='option' onmouseover='MenuItem_OnMouseOver(1);' onmouseout='MenuItem_OnMouseOut(1);' onclick='toggleDeletePatientInterface();'>
+                        <div class='optionContents'><span>&nbsp;&nbsp;Delete Patient</span></div>
+                    </td>
+                </tr>
+                
+                
+                <tr>
+                    <td height='25px'></td>
+                </tr>
+                <tr>
+                    <td height='25px'></td>
+                </tr>
+                <tr>
+                    <td id='AdminBtn3' class='option' onmouseover='MenuItem_OnMouseOver(3);' onmouseout='MenuItem_OnMouseOut(3);' onclick='toggleChangePWInterface();'>
+                        <div class='optionContents'><span>&nbsp;&nbsp;Change Patient Password</span></div>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td height='25px'></td>
+                </tr>
+                
+                
+                
+                <tr>
+                    <td height='25px'></td>
+                </tr>
+                
+                
+                
+                
+                
+            </table>
+        </div>
+        
+        <div id='NewPatientDiv' style='visibility:hidden; position: absolute; margin-top: -400px; margin-left: 1200px;'>
+            <p />
+            <table>
+                <tr>
+                    
+                    <td >Enter Patient ID:</td>
+                    <td><input id='ADDPatientID' type='text' name='ID'></td>
+                </tr>
+                <tr>
+                    <td >Enter First Name:</td>
+                    <td><input id='ADDFirstName' type='text' name='fName'></td>
+                </tr>
+                <tr>
+                    <td >Enter Last Name:</td>
+                    <td><input id='ADDLastName' type='text' name='lName'></td>
+                </tr>
+                <tr>
+                    <td >Enter Username:</td>
+                    <td><input id='ADDUserName' type='text' name='uname'></td>
+                </tr>
+                <tr>
+                    <td>Enter Password:</td>
+                    <td><input id='ADDPassword' type='password' name='password'></td>
+                </tr>
+                <tr>
+                    <td >Confirm Password:</td>
+                    <td><input id='ADDPassword2' type='password' name='password2'></td>
+                </tr>
+                <tr>
+                    
+                    <td >Enter Email:</td>
+                    <td><input id='ADDEmail' type='text' name='email'></td>
+                </tr>
+                <tr>
+                    <td><input type='button' value='Create' onclick='AddNewPatient();'></td>
+                    <td><input type='button' value='Cancel' onclick='toggleAddPatientInterface();'></td>
+                </tr>
+            </table>
+        </div>
+        
+        
+        
+        
+        <div id='DeleteDiv' style=' visibility:hidden; position: absolute; margin-top: -320px; margin-left: 350px;'>
+            <p />
+            <table>
+                <tr>
+                    <td>Enter Username: &nbsp;&nbsp;&nbsp;</td>
+                    <td><input id='DELUserName' type='text' name='uname'></td>
+                </tr>
+                <tr>
+                    <td><input type='button' value='Delete' onclick='deleteUser();'></td>
+                    <td><input type='button' value='Cancel' onclick='toggleDeleteTherapistInterface();'></td>
+                </tr>
+            </table>
+        </div>
+        
+        <div id='PatientPasswordDiv' style=' visibility:hidden; position: absolute; margin-top: -150px; margin-left: 350px;'>
+            <p />
+            <table>
+                <tr>
+                    <td>Enter Username: &nbsp;&nbsp;&nbsp;</td>
+                    <td><input id='PasswordChangeUserName' type='text' name='uname'></td>
+                </tr>
+                <tr>
+                    <td>Enter Password:</td>
+                    <td><input id='NewPW' type='password' name='pw'></td>
+                </tr>
+                <tr>
+                    <td >Confirm Password:</td>
+                    <td><input id='NewPWConfirm' type='password' name='pw2'></td>
+                </tr>
+                <tr>
+                    <td><input type='button' value='Change' onclick='changePW();'></td>
+                    <td><input type='button' value='Cancel' onclick='toggleChangePWInterface();'></td>
+                </tr>
+            </table>
+        </div>
+        
+             </body>
+        </html>

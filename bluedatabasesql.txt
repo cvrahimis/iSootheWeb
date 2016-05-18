@@ -1,0 +1,50 @@
+CREATE TABLE therapist(
+	therapistId integer primary key,
+	therapistLogin text, 
+	therapistPassword text, 
+	therapistName text, 
+	therapistAddress text, 
+	therapistPhone integer, 
+	therapistEmail text
+	);
+
+CREATE TABLE patient(
+	patientId integer primary key, 
+	therapistId integer,
+	patientLogin text,
+	patientPassword text,
+	patientFirstName text, 
+	patientLastName text, 
+	patientEmail text, 
+	FOREIGN KEY (therapistId) REFERENCES therapist(therapistId)
+	);
+
+CREATE TABLE activities(
+	activityId integer primary Key, 
+	therapistId integer, 
+	patientId integer, 
+	time text, 
+	mood text, 
+	urge integer,
+	activity text, 
+	duration text, 
+	FOREIGN KEY (therapistId) REFERENCES therapist(therapistId), 
+	FOREIGN KEY (patientId) REFERENCES patient(patientId)
+	);
+
+CREATE TABLE buttonActivations(
+	buttonId integer primary key,
+	therapistId integer,
+	patientId integer,
+	time text,
+	FOREIGN KEY (therapistId) REFERENCES therapist(therapistId),
+	FOREIGN KEY (patientId) REFERENCES patient(patientId)
+	);
+
+CREATE TABLE administrator(
+	adminId integer primary key,
+	adminLogin text, 
+	adminPassword text
+	);
+
+/*INSERT INTO activities (therapistId, patientId, time, mood, urge, activity, duration) VALUES(1 , 1, '3/21/2015 10:46pm', 'Angry', 7, 'Drawing', '20min' );*/

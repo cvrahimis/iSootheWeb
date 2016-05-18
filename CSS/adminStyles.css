@@ -1,0 +1,55 @@
+#TitleBar
+{
+	overflow:hidden; 
+	left:0; 
+	top:0; 
+	width:624px; 
+	height:50px; 
+	line-height:24px;   
+	padding:0px 0px 0px 0px; 
+	margin:0px 0px 0px 0px; 
+	text-align:left;
+	vertical-align:text-top;
+}
+
+#TitleBarSpan
+{
+	position:absolute; 
+	height:30px;
+	line-height:45px; 
+	margin:5px 0px 0px 70px;
+	font-size:30px;
+	font-weight:bold; 
+	color:#000000;
+	vertical-align:text-top;
+}
+
+.option
+{
+	width:80%;
+	height:100%;
+    background-color:#909090;
+}
+
+.optionContents
+{
+	margin-top:2px; 
+	margin-left:15px; 
+	font-size:20px;
+	font-weight:bold; 
+	color:light blue;
+}
+
+#invalidError{
+    text-align: center;
+    height: 10%;
+    width: 15%;
+}
+
+#invalidLogin {
+    color: #FF0000;
+    text-align: center;
+    height: 10%;
+    width: 15%;
+}
+
